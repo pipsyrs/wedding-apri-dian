@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ulos palette — merah, hitam, putih gading, emas */
+  --color-ink: #1a1310;
+  --color-ink-soft: #2a201b;
+  --color-ivory: #fdf8f0;
+  --color-ivory-dim: #f3e9d9;
+  --color-ulos: #8c1c13;
+  --color-ulos-deep: #5e120c;
+  --color-gold: #c9a227;
+  --color-gold-soft: #e0c86a;
+  --color-toba: #2c4a52;
+  --color-clay: #a8744f;
+
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-ink);
+  --color-muted-foreground: #6b5b4d;
+  --color-border: #e2d3b8;
+
+  --font-script: var(--font-great-vibes), cursive;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+
+  /* Spacious scale (density 3/10) */
+  --spacing-section: 7rem;
+  --spacing-section-lg: 11rem;
+
+  --ease-batak: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+  }
+
+  /* Reveal targets start hidden only when JS can animate them back in */
+  .js-motion [data-reveal] {
+    opacity: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gorga-weave {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent 0 7px,
+        color-mix(in srgb, var(--color-gold) 22%, transparent) 7px 8px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0 7px,
+        color-mix(in srgb, var(--color-ulos) 14%, transparent) 7px 8px
+      );
+  }
+
+  .shadow-soft {
+    box-shadow:
+      0 1px 2px color-mix(in srgb, var(--color-ink) 6%, transparent),
+      0 12px 32px -12px color-mix(in srgb, var(--color-ink) 22%, transparent);
+  }
+
+  .shadow-lift {
+    box-shadow:
+      0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
+      0 24px 56px -20px color-mix(in srgb, var(--color-ulos-deep) 35%, transparent);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-drift {
+  animation: drift 7s var(--ease-batak) infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js-motion [data-reveal] {
+    opacity: 1;
+  }
+
+  .animate-drift,
+  .animate-pulse-ring {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
