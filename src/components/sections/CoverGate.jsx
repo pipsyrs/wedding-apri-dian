@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap, EASE } from "@/components/motion/gsap";
 import { useAudio } from "@/components/audio/AudioContext";
@@ -41,6 +42,11 @@ export function CoverGate({ onOpen }) {
           .timeline({ defaults: { ease: EASE } })
           .from("[data-cover-frame]", { scale: 1.06, opacity: 0, duration: 1.1 })
           .from("[data-cover-ornament]", { opacity: 0, y: -16, duration: 0.7 }, "-=0.6")
+          .from(
+            "[data-cover-photo]",
+            { opacity: 0, scale: 0.8, y: 18, duration: 0.8, stagger: 0.14 },
+            "-=0.45"
+          )
           .from("[data-cover-line]", { opacity: 0, y: 24, duration: 0.7, stagger: 0.12 }, "-=0.35")
           .from("[data-cover-cta]", { opacity: 0, y: 20, duration: 0.6 }, "-=0.2");
       });
@@ -91,18 +97,39 @@ export function CoverGate({ onOpen }) {
       <UlosBand className="absolute bottom-0 left-0" tone="dark" />
 
       <div className="relative flex w-full max-w-md flex-col items-center text-center">
-        <GorgaMotif variant="ulos" className="h-16 w-auto text-gold animate-drift sm:h-20" data-hero />
+        <GorgaMotif variant="ulos" className="h-14 w-auto text-gold animate-drift sm:h-16" data-hero />
+
+        <div className="mt-6 flex items-center justify-center" aria-hidden="true">
+          {[couple.groom, couple.bride].map((person, i) => (
+            <div
+              key={person.marga}
+              data-cover-photo
+              className={`relative h-24 w-[4.5rem] overflow-hidden rounded-full border-2 border-gold/70 shadow-lift sm:h-28 sm:w-[5.25rem] ${
+                i === 0 ? "-rotate-3" : "-ml-5 rotate-3"
+              }`}
+            >
+              <Image
+                src={person.photo}
+                alt=""
+                fill
+                sizes="5.25rem"
+                priority
+                className="object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
 
         <p
           data-cover-line
-          className="mt-8 font-sans text-[0.75rem] uppercase tracking-[0.4em] text-gold"
+          className="mt-6 font-sans text-[0.75rem] uppercase tracking-[0.4em] text-gold"
         >
           Undangan Pernikahan
         </p>
 
         <h1
           data-cover-line
-          className="mt-5 font-script text-5xl leading-[1.1] text-ivory sm:text-6xl"
+          className="mt-4 font-script text-5xl leading-[1.1] text-ivory sm:text-6xl"
         >
           {couple.groom.nickName}
           <span className="mx-3 text-gold">&</span>
@@ -117,13 +144,13 @@ export function CoverGate({ onOpen }) {
           <span className="h-px w-10 bg-gold/50" aria-hidden="true" />
         </div>
 
-        <p data-cover-line className="mt-8 text-sm leading-relaxed text-ivory/80">
+        <p data-cover-line className="mt-6 text-sm leading-relaxed text-ivory/80">
           Kepada Bapak/Ibu/Saudara/i,
           <br />
           tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir.
         </p>
 
-        <div data-cover-cta className="relative mt-10">
+        <div data-cover-cta className="relative mt-8">
           <span
             className="pointer-events-none absolute inset-0 rounded-full border border-gold/40 animate-pulse-ring"
             aria-hidden="true"

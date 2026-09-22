@@ -15,7 +15,7 @@ export const couple = {
     order: "Putra ketiga dari",
     father: "Bapak F.L. Siahaan",
     mother: "Ibu D. Simanjuntak",
-    photo: "/images/groom.svg",
+    photo: "/images/mempelai/pria.jpg",
     instagram: "-",
   },
   bride: {
@@ -25,7 +25,7 @@ export const couple = {
     order: "Putri pertama",
     father: "Bapak Drs. T.D. Sianipar",
     mother: "Ibu E. Silalahi, Am.Keb",
-    photo: "/images/bride.svg",
+    photo: "/images/mempelai/wanita.jpg",
     instagram: "@diiaann91",
   },
 };
@@ -107,12 +107,12 @@ export const dalihanNaTolu = [
 ];
 
 export const gallery = [
-  { id: 1, src: "/images/gallery-1.svg", alt: "Prewedding di tepi Danau Toba", span: "tall" },
-  { id: 2, src: "/images/gallery-2.svg", alt: "Mempelai mengenakan ulos", span: "wide" },
-  { id: 3, src: "/images/gallery-3.svg", alt: "Potret berdua di rumah bolon", span: "normal" },
-  { id: 4, src: "/images/gallery-4.svg", alt: "Momen tertawa bersama keluarga", span: "normal" },
-  { id: 5, src: "/images/gallery-5.svg", alt: "Berjalan di bukit Holbung", span: "wide" },
-  { id: 6, src: "/images/gallery-6.svg", alt: "Detail sortali dan ulos", span: "tall" },
+  { id: 1, src: "/images/mempelai/1.jpeg", alt: "Prewedding di tepi Danau Toba" },
+  { id: 2, src: "/images/mempelai/2.jpeg", alt: "Mempelai mengenakan ulos" },
+  { id: 3, src: "/images/mempelai/3.jpeg", alt: "Potret berdua di rumah bolon" },
+  { id: 4, src: "/images/mempelai/4.jpeg", alt: "Momen tertawa bersama keluarga" },
+  { id: 5, src: "/images/mempelai/5.jpeg", alt: "Berjalan di bukit Holbung" },
+  { id: 6, src: "/images/mempelai/6.jpeg", alt: "Detail sortali dan ulos" },
 ];
 
 export const gifts = [
@@ -120,22 +120,22 @@ export const gifts = [
     id: "bank-1",
     type: "bank",
     label: "Bank Mandiri",
-    account: "1234567890",
-    holder: "Aprilanio Pardamean Siahaan",
+    account: "1560007590484",
+    holder: "Aprilanio Pardamean",
   },
   {
     id: "bank-2",
     type: "bank",
-    label: "Bank BCA",
-    account: "0987654321",
-    holder: "Dian Lestari Sianipar",
+    label: "Bank Mandiri",
+    account: "700006137975",
+    holder: "Dian Lestari",
   },
   {
     id: "gift",
     type: "address",
     label: "Kirim Hadiah",
-    account: "Jl. Danau Toba No. 45, Balige, Toba, Sumut 22312",
-    holder: "Penerima: Dian Lestari Sianipar",
+    account: "Taman Wisma Asri Blok AA6 No.16 RT/RW 005/021, Kel. Teluk Pucung, Bekasi Utara 17121",
+    holder: "Penerima: Aprilanio Pardamean",
   },
 ];
 
@@ -146,7 +146,7 @@ export const closing = {
   note:
     "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.",
   signature: "Kami yang berbahagia,",
-  families: "Keluarga Sihombing & Keluarga Panjaitan",
+  families: "Keluarga Siahaan & Keluarga Sianipar",
 };
 
 export const music = {

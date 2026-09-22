@@ -11,17 +11,17 @@ function Person({ person, align = "left", reveal }) {
       className="group relative flex flex-col items-center text-center"
     >
       <div className="relative">
-        <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-ivory shadow-lift sm:h-64 sm:w-64">
+        <div className="relative aspect-[3/4] w-56 overflow-hidden rounded-t-full rounded-b-3xl border-4 border-ivory shadow-lift sm:w-64">
           <Image
             src={person.photo}
             alt={`Foto ${person.fullName}`}
             fill
             sizes="(max-width: 640px) 14rem, 16rem"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
         <span
-          className="pointer-events-none absolute -inset-3 rounded-full border border-gold/40"
+          className="pointer-events-none absolute -inset-3 rounded-t-full rounded-b-[2rem] border border-gold/40"
           aria-hidden="true"
         />
         <span

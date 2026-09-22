@@ -5,12 +5,6 @@ import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { gallery } from "@/data/invitation";
 
-const SPANS = {
-  tall: "row-span-2",
-  wide: "sm:col-span-2",
-  normal: "",
-};
-
 export function Gallery() {
   const [activeIndex, setActiveIndex] = useState(null);
   const closeRef = useRef(null);
@@ -52,7 +46,7 @@ export function Gallery() {
         eyebrow="Gambar"
         title="Galeri Kami"
         subtitle="Beberapa momen yang kami rekam menjelang hari bahagia."
-        contentClassName="grid auto-rows-[190px] grid-cols-2 gap-3 sm:auto-rows-[230px] sm:grid-cols-3 sm:gap-4"
+        contentClassName="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4"
       >
         {gallery.map((photo, i) => (
           <button
@@ -63,7 +57,7 @@ export function Gallery() {
             data-reveal-delay={i * 0.05}
             onClick={() => setActiveIndex(i)}
             aria-label={`Perbesar foto: ${photo.alt}`}
-            className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-border/60 ${SPANS[photo.span]}`}
+            className="group relative aspect-[2/3] cursor-pointer overflow-hidden rounded-2xl border border-border/60"
           >
             <Image
               src={photo.src}
