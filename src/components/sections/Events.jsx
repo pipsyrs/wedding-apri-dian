@@ -25,7 +25,7 @@ export function Events() {
       eyebrow="Ulaon"
       title="Rangkaian Acara"
       subtitle="Tiga tahapan adat yang menandai perjalanan kami menjadi satu keluarga."
-      contentClassName="grid gap-7 md:grid-cols-3"
+      contentClassName="mx-auto grid max-w-3xl gap-7 md:grid-cols-2"
     >
       {events.map((event, i) => {
         const date = new Date(event.date);
@@ -46,8 +46,8 @@ export function Events() {
             <h3 className="mt-6 text-center font-script text-3xl text-ulos">{event.name}</h3>
             <p className="mt-2 text-center text-sm text-muted-foreground">{event.subtitle}</p>
 
-            <dl className="mt-7 space-y-4 border-t border-border/70 pt-6 text-sm">
-              <div className="flex gap-3">
+            <dl className="mt-7 space-y-4 border-t border-border/70 pt-6 text-center text-sm">
+              <div className="flex items-center justify-center gap-2">
                 <dt className="sr-only">Tanggal</dt>
                 <Icon path="M3 5h18v16H3zM8 3v4M16 3v4M3 11h18" />
                 <dd>
@@ -55,18 +55,20 @@ export function Events() {
                 </dd>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex items-center justify-center gap-2">
                 <dt className="sr-only">Waktu</dt>
                 <Icon path="M12 7v5l3 2M12 21a9 9 0 100-18 9 9 0 000 18z" />
                 <dd>{timeFmt.format(date)} WIB &ndash; selesai</dd>
               </div>
 
-              <div className="flex gap-3">
+              <div>
                 <dt className="sr-only">Lokasi</dt>
-                <Icon path="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11zM12 12a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
-                <dd>
-                  <span className="font-medium">{event.venue}</span>
-                  <span className="mt-1 block text-muted-foreground">{event.address}</span>
+                <dd className="flex flex-col items-center gap-1">
+                  <span className="flex items-center gap-2 font-medium">
+                    <Icon path="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11zM12 12a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
+                    {event.venue}
+                  </span>
+                  <span className="text-muted-foreground">{event.address}</span>
                 </dd>
               </div>
             </dl>
@@ -97,7 +99,7 @@ function Icon({ path }) {
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="mt-0.5 h-4 w-4 shrink-0 text-gold"
+      className="h-4 w-4 shrink-0 text-gold"
       aria-hidden="true"
     >
       <path d={path} />

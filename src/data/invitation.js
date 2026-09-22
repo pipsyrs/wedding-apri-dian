@@ -107,12 +107,12 @@ export const dalihanNaTolu = [
 ];
 
 export const gallery = [
-  { id: 1, src: "/images/mempelai/1.jpeg", alt: "Prewedding di tepi Danau Toba" },
-  { id: 2, src: "/images/mempelai/2.jpeg", alt: "Mempelai mengenakan ulos" },
-  { id: 3, src: "/images/mempelai/3.jpeg", alt: "Potret berdua di rumah bolon" },
-  { id: 4, src: "/images/mempelai/4.jpeg", alt: "Momen tertawa bersama keluarga" },
-  { id: 5, src: "/images/mempelai/5.jpeg", alt: "Berjalan di bukit Holbung" },
-  { id: 6, src: "/images/mempelai/6.jpeg", alt: "Detail sortali dan ulos" },
+  { id: 1, src: "/images/mempelai/1.jpeg", alt: "" },
+  { id: 2, src: "/images/mempelai/2.jpeg", alt: "" },
+  { id: 3, src: "/images/mempelai/3.jpeg", alt: "" },
+  { id: 4, src: "/images/mempelai/4.jpeg", alt: "" },
+  { id: 5, src: "/images/mempelai/5.jpeg", alt: "" },
+  { id: 6, src: "/images/mempelai/6.jpeg", alt: "" },
 ];
 
 export const gifts = [
