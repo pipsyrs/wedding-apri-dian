@@ -44,7 +44,6 @@ export function Events() {
             />
 
             <h3 className="mt-6 text-center font-script text-3xl text-ulos">{event.name}</h3>
-            <p className="mt-2 text-center text-sm text-muted-foreground">{event.subtitle}</p>
 
             <dl className="mt-7 space-y-4 border-t border-border/70 pt-6 text-center text-sm">
               <div className="flex items-center justify-center gap-2">

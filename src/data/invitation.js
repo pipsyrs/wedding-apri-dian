@@ -36,8 +36,7 @@ export const mainEventDate = "2026-10-24T08:30:00+07:00";
 export const events = [
   {
     id: "martumpol",
-    name: "Martumpol",
-    subtitle: "Pemberkatan janji di hadapan jemaat",
+    name: "Pemberkatan",
     date: "2026-10-24T08:30:00+07:00",
     venue: "HKBP Ressort Taman Wisma Asri",
     address: "Komp. Ruko Taman Wisma Asri, Blok. T 7-10, Bekasi Utara",
@@ -45,8 +44,7 @@ export const events = [
   },
   {
     id: "adat",
-    name: "Ulaon Unjuk",
-    subtitle: "Pesta adat Batak Toba Sumatra Utara",
+    name: "Pesta Adat",
     date: "2026-10-24T12:00:00+07:00",
     venue: "Gedung Grahara Delima I",
     address: "Jl. Wijaya I Inspeksi Kalimalang RT 006/RW 015, Jakasampurna, Kec. Bekasi Barat",

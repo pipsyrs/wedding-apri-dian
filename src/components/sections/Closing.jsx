@@ -13,11 +13,8 @@ export function Closing() {
       <UlosBand className="absolute left-0 top-0" tone="dark" />
 
       <Reveal className="relative mx-auto max-w-2xl text-center" data-reveal-group>
-        <GorgaMotif
-          data-reveal="scale"
-          variant="sitompi"
-          className="mx-auto h-16 w-auto text-gold animate-drift"
-        />
+
+        <GorgaMotif variant="simeol" className="mx-auto h-16 w-auto text-gold animate-drift" data-hero />
 
         <blockquote data-reveal className="mt-10">
           <p className="text-lg leading-relaxed text-ivory/85 text-balance sm:text-xl">
