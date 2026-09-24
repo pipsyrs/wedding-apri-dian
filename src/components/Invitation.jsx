@@ -9,6 +9,7 @@ import { Hero } from "./sections/Hero";
 import { Couple } from "./sections/Couple";
 import { Countdown } from "./sections/Countdown";
 import { Events } from "./sections/Events";
+import { Story } from "./sections/Story";
 import { Gallery } from "./sections/Gallery";
 import { Location } from "./sections/Location";
 import { DigitalEnvelope } from "./sections/DigitalEnvelope";
@@ -41,6 +42,7 @@ export function Invitation({ wishesSlot }) {
           <Couple />
           <Countdown />
           <Events />
+          <Story />
           <Gallery />
           <Location />
           <DigitalEnvelope />

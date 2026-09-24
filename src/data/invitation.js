@@ -65,24 +65,24 @@ export const location = {
 
 export const story = [
   {
-    year: "2019",
-    title: "Pertama Bertemu",
-    body: "Bertemu di perayaan Natal bona pasogit, diperkenalkan oleh tulang dari kedua belah pihak.",
+    year: "1999",
+    title: "First Meet",
+    body: "Tahun 1999 kami pertama kali kenal dan ertemu di gereja (sekolah minggu). Selama sekolah minggu kami tidak pernah bertemu kemabli saat Malua / Katekisasi tahun 2008. Kami tetap tidak pernah berkomunikasi secara intens. Hingga selesainya katekisasi kami pun menjalani kehidupan masing-masing tanpa adanya komunikasi. Hingga pada tahun 2023 kami mulai berkomunikasi kembali di sosial media dan berlanjut dengan pertemuan.",
   },
   {
-    year: "2022",
-    title: "Marhusip",
-    body: "Pembicaraan awal kedua keluarga secara tertutup, menyatukan niat dan doa.",
+    year: "2023",
+    title: "Relationship",
+    body: "Oktober 2023 kami mengikat janji sebagai sepasang kekasih.",
   },
   {
     year: "2025",
-    title: "Marhata Sinamot",
-    body: "Kedua keluarga bermusyawarah, menyepakati hari baik dalam kehangatan kekeluargaan.",
+    title: "Engagement",
+    body: "Walaupun kami menjalani hubungan secara LDR, ada nya perbedaan pendapat tidak membuat kami menjadi menyerah dalam hubungan ini. Hinga pada akhirnya kami memutuskan untuk lamaran pada Novermber 2025.",
   },
   {
     year: "2026",
-    title: "Hari Bahagia",
-    body: "Diberkati sebagai satu keluarga, disaksikan dongan tubu, hula-hula, dan boru.",
+    title: "Married",
+    body: "Kami memutuskan untuk mengikat janji suci pernikahan, pada 24 Oktober 2026.",
   },
 ];
 
