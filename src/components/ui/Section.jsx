@@ -7,7 +7,6 @@ import { UlosDivider } from "@/components/ornaments/UlosDivider";
  */
 export function Section({
   id,
-  eyebrow,
   title,
   subtitle,
   children,
@@ -29,17 +28,8 @@ export function Section({
       className={`relative overflow-hidden px-5 py-section sm:px-8 lg:py-section-lg ${tones[tone]} ${className}`}
     >
       <Reveal className="relative mx-auto w-full max-w-6xl">
-        {(eyebrow || title) && (
+        {(title) && (
           <header className="mb-12 text-center lg:mb-16" data-reveal-group>
-            {eyebrow ? (
-              <p
-                data-reveal="fade"
-                className="font-sans text-[0.75rem] uppercase tracking-[0.35em] text-gold"
-              >
-                {eyebrow}
-              </p>
-            ) : null}
-
             {title ? (
               <h2
                 data-reveal

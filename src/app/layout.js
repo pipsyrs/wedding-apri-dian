@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
       lang="id"
       className={`${greatVibes.variable} ${cormorant.variable} ${jakarta.variable} antialiased`}
     >
-      <body className="min-h-dvh">{children}</body>
+      <body className="min-h-dvh" suppressHydrationWarning>{children}</body>
     </html>
   );
 }

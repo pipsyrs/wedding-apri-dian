@@ -9,22 +9,22 @@ export const meta = {
 
 export const couple = {
   groom: {
-    fullName: "Aprilanio Pardamean Siahaan",
+    fullName: "Aprilanio Pardamean",
     nickName: "Apri",
     marga: "Siahaan",
-    order: "Putra ketiga dari",
-    father: "Bapak F.L. Siahaan",
+    order: "Putra dari",
+    father: "Bpk. F.L. Siahaan",
     mother: "Ibu D. Simanjuntak",
     photo: "/images/mempelai/pria.jpg",
     instagram: "-",
   },
   bride: {
-    fullName: "Dian Lestari Sianipar",
+    fullName: "Dian Lestari",
     nickName: "Dian",
     marga: "Sianipar",
-    order: "Putri pertama",
-    father: "Bapak Drs. T.D. Sianipar",
-    mother: "Ibu E. Silalahi, Am.Keb",
+    order: "Putri dari",
+    father: "Bpk. Drs. T.D. Sianipar",
+    mother: "Ibu E. Silalahi, Amd.Keb",
     photo: "/images/mempelai/wanita.jpg",
     instagram: "@diiaann91",
   },
@@ -44,7 +44,7 @@ export const events = [
   },
   {
     id: "adat",
-    name: "Pesta Adat",
+    name: "Resepsi",
     date: "2026-10-24T12:00:00+07:00",
     venue: "Gedung Grahara Delima I",
     address: "Jl. Wijaya I Inspeksi Kalimalang RT 006/RW 015, Jakasampurna, Kec. Bekasi Barat",
@@ -53,7 +53,7 @@ export const events = [
 ];
 
 export const location = {
-  venue: "Gedung Grahara Delima I",
+  venue: "Gedung Graha Delima I",
   address: "Jl. Wijaya I Inspeksi Kalimalang RT 006/RW 015, Jakasampurna, Kec. Bekasi Barat",
   mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.1121941689976!2d106.95519967453151!3d-6.250805961202137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698cff0a4d4ee1%3A0xf490718ddea2e4fc!2sGraha%20Delima!5e1!3m2!1sid!2sid!4v1789974228868!5m2!1sid!2sid",
   mapUrl: "https://maps.app.goo.gl/E96pKKsweWDi9xy59",
@@ -105,12 +105,12 @@ export const dalihanNaTolu = [
 ];
 
 export const gallery = [
-  { id: 1, src: "/images/mempelai/1.jpeg", alt: "" },
-  { id: 2, src: "/images/mempelai/2.jpeg", alt: "" },
-  { id: 3, src: "/images/mempelai/3.jpeg", alt: "" },
+  { id: 1, src: "/images/mempelai/5.jpeg", alt: "" },
+  { id: 3, src: "/images/mempelai/6.jpeg", alt: "" },
   { id: 4, src: "/images/mempelai/4.jpeg", alt: "" },
-  { id: 5, src: "/images/mempelai/5.jpeg", alt: "" },
-  { id: 6, src: "/images/mempelai/6.jpeg", alt: "" },
+  { id: 5, src: "/images/mempelai/2.jpeg", alt: "" },
+  // { id: 6, src: "/images/mempelai/1.jpeg", alt: "" },
+  // { id: 3, src: "/images/mempelai/3.jpeg", alt: "" },
 ];
 
 export const gifts = [
@@ -145,6 +145,7 @@ export const closing = {
     "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.",
   signature: "Kami yang berbahagia,",
   families: "Keluarga Siahaan & Keluarga Sianipar",
+  photo: "/images/mempelai/3.jpeg",
 };
 
 export const music = {

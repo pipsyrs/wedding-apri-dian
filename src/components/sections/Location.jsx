@@ -8,7 +8,6 @@ export function Location() {
       id="lokasi"
       eyebrow="Inganan"
       title="Lokasi Acara"
-      subtitle="Kami menantikan kehadiran Anda di Balige, tepi Danau Toba."
       tone="dim"
       contentClassName="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center"
     >

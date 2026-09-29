@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { GorgaMotif } from "@/components/ornaments/GorgaMotif";
 import { UlosBand } from "@/components/ornaments/UlosBand";
@@ -25,27 +26,40 @@ export function Closing() {
           </cite>
         </blockquote>
 
-        <p data-reveal className="mx-auto mt-12 max-w-xl text-base leading-relaxed text-ivory/80">
-          {closing.note}
-        </p>
+        <div className="relative mt-12 overflow-hidden rounded-2xl border border-gold/20 px-5 py-12 sm:px-10 sm:py-14">
+          <Image
+            src={closing.photo}
+            alt=""
+            fill
+            sizes="(min-width: 672px) 672px, 100vw"
+            className="object-cover object-[center_25%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/90" aria-hidden="true" />
 
-        <div data-reveal className="mt-14">
-          <p className="font-sans text-[0.75rem] uppercase tracking-[0.3em] text-ivory/70">
-            {closing.signature}
-          </p>
-          <p className="mt-6 font-script text-5xl leading-tight text-gold sm:text-6xl">
-            {couple.groom.nickName}
-            <span className="mx-3 text-ivory/75">&amp;</span>
-            {couple.bride.nickName}
-          </p>
-          <p className="mt-6 text-sm text-ivory/75">{closing.families}</p>
-        </div>
+          <div className="relative">
+            <p data-reveal className="mx-auto max-w-xl text-base leading-relaxed text-ivory/90">
+              {closing.note}
+            </p>
 
-        <div data-reveal className="mt-16 border-t border-ivory/15 pt-8">
-          <p className="font-sans text-[0.75rem] tracking-[0.25em] text-gold">{meta.hashtag}</p>
-          <p className="mt-3 font-sans text-[0.75rem] tracking-[0.2em] text-ivory/70">
-            Horas &middot; Gabe &middot; Sahat Sahat Ni Solu
-          </p>
+            <div data-reveal className="mt-14">
+              <p className="font-sans text-[0.75rem] uppercase tracking-[0.3em] text-ivory/80">
+                {closing.signature}
+              </p>
+              <p className="mt-6 font-script text-5xl leading-tight text-gold sm:text-6xl">
+                {couple.groom.nickName}
+                <span className="mx-3 text-ivory/75">&amp;</span>
+                {couple.bride.nickName}
+              </p>
+              <p className="mt-6 text-sm text-ivory/85">{closing.families}</p>
+            </div>
+
+            <div data-reveal className="mt-16 border-t border-ivory/20 pt-8">
+              <p className="font-sans text-[0.75rem] tracking-[0.25em] text-gold">{meta.hashtag}</p>
+              <p className="mt-3 font-sans text-[0.75rem] tracking-[0.2em] text-ivory/80">
+                Horas &middot; Gabe &middot; Sahat Sahat Ni Solu
+              </p>
+            </div>
+          </div>
         </div>
       </Reveal>
     </footer>

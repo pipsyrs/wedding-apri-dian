@@ -24,12 +24,6 @@ function Person({ person, align = "left", reveal }) {
           className="pointer-events-none absolute -inset-3 rounded-t-full rounded-b-[2rem] border border-gold/40"
           aria-hidden="true"
         />
-        <span
-          className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-ulos px-4 py-1 font-sans text-[0.75rem] uppercase tracking-[0.25em] text-ivory"
-          aria-hidden="true"
-        >
-          {person.marga}
-        </span>
       </div>
 
       <h3 className="mt-10 font-script text-3xl leading-tight sm:text-4xl">{person.fullName}</h3>
@@ -69,7 +63,6 @@ export function Couple() {
   return (
     <Section
       id="mempelai"
-      eyebrow="Dalihan Na Tolu"
       title="Kedua Mempelai"
       subtitle="Dengan hormat dan sukacita, kedua keluarga memperkenalkan putra dan putri mereka."
       tone="dim"

@@ -96,13 +96,6 @@ export function Hero({ active = true }) {
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
         <GorgaMotif variant="simeol" className="h-10 w-40 text-gold" data-hero />
 
-        <p
-          data-hero-eyebrow
-          className="mt-8 font-sans text-[0.75rem] uppercase tracking-[0.42em] text-gold"
-        >
-          Horas! Kami akan menikah
-        </p>
-
         <h1
           data-hero-names
           className="mt-6 font-script text-[3.25rem] leading-[1.05] text-ivory sm:text-7xl lg:text-8xl"
@@ -122,12 +115,7 @@ export function Hero({ active = true }) {
           data-hero-detail
           className="mt-7 max-w-lg text-base leading-relaxed text-ivory/70 text-balance sm:text-lg"
         >
-          Dengan sukacita dan doa kedua keluarga, kami mengundang Anda untuk menjadi saksi
-          janji suci kami dalam adat Batak Toba.
-        </p>
-
-        <p data-hero-detail className="mt-6 font-sans text-[0.75rem] tracking-[0.3em] text-gold">
-          {meta.hashtag}
+          Dengan penuh sukacita dan memohon doa restu dari kedua keluarga, kami mengundang Anda untuk hadir dan menjadi saksi dalam momen bahagia penyatuan janji suci kami.
         </p>
 
         <a
