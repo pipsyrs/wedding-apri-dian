@@ -17,15 +17,6 @@ export function Closing() {
 
         <GorgaMotif variant="simeol" className="mx-auto h-16 w-auto text-gold animate-drift" data-hero />
 
-        <blockquote data-reveal className="mt-10">
-          <p className="text-lg leading-relaxed text-ivory/85 text-balance sm:text-xl">
-            {closing.verse}
-          </p>
-          <cite className="mt-5 block font-sans text-[0.75rem] uppercase not-italic tracking-[0.3em] text-gold">
-            {closing.verseRef}
-          </cite>
-        </blockquote>
-
         <div className="relative mt-12 overflow-hidden rounded-2xl border border-gold/20 px-5 py-12 sm:px-10 sm:py-14">
           <Image
             src={closing.photo}
@@ -36,6 +27,15 @@ export function Closing() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/90" aria-hidden="true" />
 
+          <blockquote data-reveal className="mt-10 mb-10">
+            <p className="text-lg leading-relaxed text-ivory/85 text-balance sm:text-xl">
+              {closing.verse}
+            </p>
+            <cite className="mt-5 block font-sans text-[0.75rem] uppercase not-italic tracking-[0.3em] text-gold">
+              {closing.verseRef}
+            </cite>
+          </blockquote>
+          
           <div className="relative">
             <p data-reveal className="mx-auto max-w-xl text-base leading-relaxed text-ivory/90">
               {closing.note}
@@ -49,14 +49,6 @@ export function Closing() {
                 {couple.groom.nickName}
                 <span className="mx-3 text-ivory/75">&amp;</span>
                 {couple.bride.nickName}
-              </p>
-              <p className="mt-6 text-sm text-ivory/85">{closing.families}</p>
-            </div>
-
-            <div data-reveal className="mt-16 border-t border-ivory/20 pt-8">
-              <p className="font-sans text-[0.75rem] tracking-[0.25em] text-gold">{meta.hashtag}</p>
-              <p className="mt-3 font-sans text-[0.75rem] tracking-[0.2em] text-ivory/80">
-                Horas &middot; Gabe &middot; Sahat Sahat Ni Solu
               </p>
             </div>
           </div>

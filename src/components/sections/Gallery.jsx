@@ -46,7 +46,7 @@ export function Gallery() {
         eyebrow="Gambar"
         title="Galeri Kami"
         subtitle="Beberapa momen yang kami rekam menjelang hari bahagia."
-        contentClassName="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4"
+        contentClassName="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4"
       >
         {gallery.map((photo, i) => (
           <button
@@ -57,15 +57,17 @@ export function Gallery() {
             data-reveal-delay={i * 0.05}
             onClick={() => setActiveIndex(i)}
             aria-label={`Perbesar foto: ${photo.alt}`}
-            className="group relative aspect-[2/3] cursor-pointer overflow-hidden rounded-2xl border border-border/60"
+            className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-border/60 bg-ink/5 ${
+              photo.width > photo.height ? "aspect-[3/2] md:col-span-2" : "aspect-[2/3]"
+            }`}
           >
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
               loading="lazy"
-              sizes="(max-width: 640px) 50vw, 33vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              sizes={photo.width > photo.height ? "50vw" : "(max-width: 768px) 50vw, 25vw"}
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/35" />
             <span className="absolute inset-x-0 bottom-0 translate-y-full p-4 text-left font-sans text-[0.75rem] uppercase tracking-[0.2em] text-ivory transition-transform duration-500 group-hover:translate-y-0">
