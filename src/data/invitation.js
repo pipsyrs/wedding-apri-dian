@@ -67,7 +67,7 @@ export const story = [
   {
     year: "1999",
     title: "First Meet",
-    body: "Tahun 1999 kami pertama kali kenal dan ertemu di gereja (sekolah minggu). Selama sekolah minggu kami tidak pernah bertemu kemabli saat Malua / Katekisasi tahun 2008. Kami tetap tidak pernah berkomunikasi secara intens. Hingga selesainya katekisasi kami pun menjalani kehidupan masing-masing tanpa adanya komunikasi. Hingga pada tahun 2023 kami mulai berkomunikasi kembali di sosial media dan berlanjut dengan pertemuan.",
+    body: "Tahun 1999 kami pertama kali kenal dan bertemu di gereja (sekolah minggu). Selama sekolah minggu kami tidak pernah bertemu kembali saat Malua / Katekisasi tahun 2008. Kami tetap tidak pernah berkomunikasi secara intens. Hingga selesainya katekisasi kami pun menjalani kehidupan masing-masing tanpa adanya komunikasi. Hingga pada tahun 2023 kami mulai berkomunikasi kembali di sosial media dan berlanjut dengan pertemuan.",
   },
   {
     year: "2023",
@@ -77,7 +77,7 @@ export const story = [
   {
     year: "2025",
     title: "Engagement",
-    body: "Walaupun kami menjalani hubungan secara LDR, ada nya perbedaan pendapat tidak membuat kami menjadi menyerah dalam hubungan ini. Hinga pada akhirnya kami memutuskan untuk lamaran pada Novermber 2025.",
+    body: "Walaupun kami menjalani hubungan secara LDR, ada nya perbedaan pendapat tidak membuat kami menjadi menyerah dalam hubungan ini. Hingga pada akhirnya kami memutuskan untuk lamaran pada November 2025.",
   },
   {
     year: "2026",
