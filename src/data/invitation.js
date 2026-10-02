@@ -9,7 +9,7 @@ export const meta = {
 
 export const couple = {
   groom: {
-    fullName: "Aprilanio Pardamean",
+    fullName: "Aprilanio Pardamean Siahaan, S.E",
     nickName: "Apri",
     marga: "Siahaan",
     order: "Putra dari",
@@ -19,7 +19,7 @@ export const couple = {
     instagram: "-",
   },
   bride: {
-    fullName: "Dian Lestari",
+    fullName: " Dr. Dian Lestari Sianipar, MARS",
     nickName: "Dian",
     marga: "Sianipar",
     order: "Putri dari",
