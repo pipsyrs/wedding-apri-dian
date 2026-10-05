@@ -19,7 +19,7 @@ export const couple = {
     instagram: "-",
   },
   bride: {
-    fullName: " Dr. Dian Lestari Sianipar, MARS",
+    fullName: " dr. Dian Lestari Sianipar, MARS",
     nickName: "Dian",
     marga: "Sianipar",
     order: "Putri dari",
@@ -29,6 +29,12 @@ export const couple = {
     instagram: "@diiaann91",
   },
 };
+
+// Foto couple di hero — ganti path sesuai foto Anda
+export const heroPhotos = ["/images/mempelai/pria.jpeg", "/images/mempelai/wanita.jpeg"];
+
+// Foto di halaman pembuka (cover)
+export const coverPhoto = "/images/mempelai/5.jpeg";
 
 // Acara utama dipakai countdown & save-the-date
 export const mainEventDate = "2026-10-24T08:30:00+07:00";
@@ -45,7 +51,7 @@ export const events = [
   {
     id: "adat",
     name: "Resepsi",
-    date: "2026-10-24T12:00:00+07:00",
+    date: "2026-10-24T14:00:00+07:00",
     venue: "Gedung Grahara Delima 1",
     address: "Jl. Wijaya I Inspeksi Kalimalang RT 006/RW 015, Jakasampurna, Kec. Bekasi Barat",
     mapUrl: "https://maps.app.goo.gl/E96pKKsweWDi9xy59",

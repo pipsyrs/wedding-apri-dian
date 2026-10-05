@@ -7,7 +7,7 @@ import { useAudio } from "@/components/audio/AudioContext";
 import { GorgaMotif } from "@/components/ornaments/GorgaMotif";
 import { UlosBand } from "@/components/ornaments/UlosBand";
 import { Button } from "@/components/ui/Button";
-import { couple, mainEventDate } from "@/data/invitation";
+import { couple, coverPhoto, mainEventDate } from "@/data/invitation";
 
 const dateLabel = new Intl.DateTimeFormat("id-ID", {
   day: "numeric",
@@ -44,7 +44,7 @@ export function CoverGate({ onOpen }) {
           .from("[data-cover-ornament]", { opacity: 0, y: -16, duration: 0.7 }, "-=0.6")
           .from(
             "[data-cover-photo]",
-            { opacity: 0, scale: 0.8, y: 18, duration: 0.8, stagger: 0.14 },
+            { opacity: 0, scale: 0.8, y: 18, duration: 0.8 },
             "-=0.45"
           )
           .from("[data-cover-line]", { opacity: 0, y: 24, duration: 0.7, stagger: 0.12 }, "-=0.35")
@@ -99,25 +99,21 @@ export function CoverGate({ onOpen }) {
       <div className="relative flex w-full max-w-md flex-col items-center text-center">
         <GorgaMotif variant="ulos" className="h-14 w-auto text-gold animate-drift sm:h-16" data-hero />
 
-        <div className="mt-6 flex items-center justify-center" aria-hidden="true">
-          {[couple.groom, couple.bride].map((person, i) => (
-            <div
-              key={person.marga}
-              data-cover-photo
-              className={`relative h-24 w-[4.5rem] overflow-hidden rounded-full border-2 border-gold/70 shadow-lift sm:h-28 sm:w-[5.25rem] ${
-                i === 0 ? "-rotate-3" : "-ml-5 rotate-3"
-              }`}
-            >
-              <Image
-                src={person.photo}
-                alt=""
-                fill
-                sizes="5.25rem"
-                priority
-                className="object-cover object-top"
-              />
-            </div>
-          ))}
+        <div
+          data-cover-photo
+          className="relative mt-6 h-52 w-36 overflow-hidden rounded-t-full border-2 border-gold/70 p-1 shadow-lift sm:h-60 sm:w-40"
+          aria-hidden="true"
+        >
+          <div className="relative h-full w-full overflow-hidden rounded-t-full">
+            <Image
+              src={coverPhoto}
+              alt=""
+              fill
+              sizes="10rem"
+              priority
+              className="object-cover object-top"
+            />
+          </div>
         </div>
 
         <p

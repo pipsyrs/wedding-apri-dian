@@ -7,7 +7,6 @@ export function Story() {
       id="cerita"
       eyebrow="Barita"
       title="Perjalanan Kami"
-      subtitle="Dari perkenalan hingga hari yang dinanti, setiap langkah dijalani bersama keluarga."
       tone="dim"
     >
       <ol className="relative mx-auto max-w-2xl" data-reveal-group>

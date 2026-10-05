@@ -24,7 +24,6 @@ export function Events() {
       id="acara"
       eyebrow="Ulaon"
       title="Rangkaian Acara"
-      subtitle="Tiga tahapan adat yang menandai perjalanan kami menjadi satu keluarga."
       contentClassName="mx-auto grid max-w-3xl gap-7 md:grid-cols-2"
     >
       {events.map((event, i) => {
@@ -57,7 +56,7 @@ export function Events() {
               <div className="flex items-center justify-center gap-2">
                 <dt className="sr-only">Waktu</dt>
                 <Icon path="M12 7v5l3 2M12 21a9 9 0 100-18 9 9 0 000 18z" />
-                <dd>{timeFmt.format(date)} WIB &ndash; selesai</dd>
+                <dd>{timeFmt.format(date)} WIB</dd>
               </div>
 
               <div>

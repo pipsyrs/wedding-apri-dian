@@ -1,18 +1,18 @@
-import { Cormorant_Infant, Great_Vibes, Plus_Jakarta_Sans } from "next/font/google";
+import { Lora, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import { meta } from "@/data/invitation";
 import "./globals.css";
 
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Infant({
-  variable: "--font-cormorant",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="id"
-      className={`${greatVibes.variable} ${cormorant.variable} ${jakarta.variable} antialiased`}
+      className={`${playfair.variable} ${lora.variable} ${jakarta.variable} antialiased`}
     >
       <body className="min-h-dvh" suppressHydrationWarning>{children}</body>
     </html>

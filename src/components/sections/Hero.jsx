@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap, EASE, SplitText } from "@/components/motion/gsap";
 import { GorgaMotif } from "@/components/ornaments/GorgaMotif";
 import { UlosBand } from "@/components/ornaments/UlosBand";
-import { couple, mainEventDate, meta } from "@/data/invitation";
+import { couple, heroPhotos, mainEventDate, meta } from "@/data/invitation";
 
 const dateLabel = new Intl.DateTimeFormat("id-ID", {
   weekday: "long",
@@ -39,6 +39,12 @@ export function Hero({ active = true }) {
           { scale: 1.12, opacity: 0 },
           { scale: 1, opacity: 1, duration: 1.4 },
         )
+          .fromTo(
+            "[data-hero-photo]",
+            { opacity: 0, y: 24, scale: 0.9 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.9, stagger: 0.15 },
+            "-=0.9",
+          )
           .fromTo(
             "[data-hero-eyebrow]",
             { opacity: 0, y: 18 },
@@ -94,11 +100,32 @@ export function Hero({ active = true }) {
       <UlosBand className="absolute left-0 top-0" tone="dark" />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+        <div className="mb-8 flex items-center justify-center">
+          {heroPhotos.map((src, i) => (
+            <div
+              key={i}
+              data-hero-photo
+              className={`relative h-40 w-[7.5rem] overflow-hidden rounded-full border-2 border-gold/70 shadow-lift sm:h-48 sm:w-36 lg:h-56 lg:w-[10.5rem] ${
+                i === 0 ? "-rotate-3" : "-ml-6 rotate-3 sm:-ml-8"
+              }`}
+            >
+              <Image
+                src={src}
+                alt={i === 0 ? couple.groom.nickName : couple.bride.nickName}
+                fill
+                priority
+                sizes="(min-width: 1024px) 10.5rem, (min-width: 640px) 9rem, 7.5rem"
+                className="object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
+
         <GorgaMotif variant="simeol" className="h-10 w-40 text-gold" data-hero />
 
         <h1
           data-hero-names
-          className="mt-6 font-script text-[3.25rem] leading-[1.05] text-ivory sm:text-7xl lg:text-8xl"
+          className="mt-6 font-script text-5xl leading-[1.05] text-ivory sm:text-7xl lg:text-8xl"
         >
           {couple.groom.nickName} &amp; {couple.bride.nickName}
         </h1>

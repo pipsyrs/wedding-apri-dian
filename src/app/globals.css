@@ -18,8 +18,8 @@
   --color-muted-foreground: #6b5b4d;
   --color-border: #e2d3b8;
 
-  --font-script: var(--font-great-vibes), cursive;
-  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-script: var(--font-playfair), Georgia, serif;
+  --font-serif: var(--font-lora), Georgia, serif;
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
 
   /* Spacious scale (density 3/10) */
