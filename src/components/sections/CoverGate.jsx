@@ -168,10 +168,6 @@ export function CoverGate({ onOpen }) {
             Buka Undangan
           </Button>
         </div>
-
-        <p data-cover-cta className="mt-5 text-[0.75rem] text-ivory/70">
-          Undangan akan diiringi musik
-        </p>
       </div>
     </div>
   );
