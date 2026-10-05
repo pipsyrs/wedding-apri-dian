@@ -56,7 +56,10 @@ export function Events() {
               <div className="flex items-center justify-center gap-2">
                 <dt className="sr-only">Waktu</dt>
                 <Icon path="M12 7v5l3 2M12 21a9 9 0 100-18 9 9 0 000 18z" />
-                <dd>{timeFmt.format(date)} WIB</dd>
+                <dd>
+                  {timeFmt.format(date)}
+                  {event.endTime ? ` - ${event.endTime}` : ""} WIB
+                </dd>
               </div>
 
               <div>

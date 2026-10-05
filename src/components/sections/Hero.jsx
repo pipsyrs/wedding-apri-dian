@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap, EASE, SplitText } from "@/components/motion/gsap";
 import { GorgaMotif } from "@/components/ornaments/GorgaMotif";
 import { UlosBand } from "@/components/ornaments/UlosBand";
-import { couple, heroPhotos, mainEventDate, meta } from "@/data/invitation";
+import { couple, heroPhoto, mainEventDate, meta } from "@/data/invitation";
 
 const dateLabel = new Intl.DateTimeFormat("id-ID", {
   weekday: "long",
@@ -42,7 +42,7 @@ export function Hero({ active = true }) {
           .fromTo(
             "[data-hero-photo]",
             { opacity: 0, y: 24, scale: 0.9 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.9, stagger: 0.15 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.9 },
             "-=0.9",
           )
           .fromTo(
@@ -100,25 +100,20 @@ export function Hero({ active = true }) {
       <UlosBand className="absolute left-0 top-0" tone="dark" />
 
       <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-        <div className="mb-8 flex items-center justify-center">
-          {heroPhotos.map((src, i) => (
-            <div
-              key={i}
-              data-hero-photo
-              className={`relative h-40 w-[7.5rem] overflow-hidden rounded-full border-2 border-gold/70 shadow-lift sm:h-48 sm:w-36 lg:h-56 lg:w-[10.5rem] ${
-                i === 0 ? "-rotate-3" : "-ml-6 rotate-3 sm:-ml-8"
-              }`}
-            >
-              <Image
-                src={src}
-                alt={i === 0 ? couple.groom.nickName : couple.bride.nickName}
-                fill
-                priority
-                sizes="(min-width: 1024px) 10.5rem, (min-width: 640px) 9rem, 7.5rem"
-                className="object-cover object-top"
-              />
-            </div>
-          ))}
+        <div
+          data-hero-photo
+          className="relative mb-8 h-52 w-36 overflow-hidden rounded-t-full border-2 border-gold/70 p-1 shadow-lift sm:h-60 sm:w-40 lg:h-72 lg:w-48"
+        >
+          <div className="relative h-full w-full overflow-hidden rounded-t-full">
+            <Image
+              src={heroPhoto}
+              alt={`${couple.groom.nickName} & ${couple.bride.nickName}`}
+              fill
+              priority
+              sizes="(min-width: 1024px) 12rem, 10rem"
+              className="object-cover object-top"
+            />
+          </div>
         </div>
 
         <GorgaMotif variant="simeol" className="h-10 w-40 text-gold" data-hero />
