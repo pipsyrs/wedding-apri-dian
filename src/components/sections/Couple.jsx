@@ -26,7 +26,7 @@ function Person({ person, align = "left", reveal }) {
         />
       </div>
 
-      <h3 className="mt-10 font-script text-3xl leading-tight sm:text-4xl">{person.fullName}</h3>
+      <h3 className="mt-10 whitespace-nowrap font-script text-lg leading-tight sm:text-2xl lg:text-xl xl:text-2xl">{person.fullName}</h3>
 
       <p className="mt-4 text-sm text-muted-foreground">{person.order}</p>
       <p className="mt-1 text-base leading-relaxed">
