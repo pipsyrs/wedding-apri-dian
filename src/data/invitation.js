@@ -52,7 +52,7 @@ export const events = [
     id: "adat",
     name: "Resepsi",
     date: "2026-10-24T14:00:00+07:00",
-    venue: "Gedung Grahara Delima 1",
+    venue: "Gedung Graha Delima 1",
     address: "Jl. Wijaya I Inspeksi Kalimalang RT 006/RW 015, Jakasampurna, Kec. Bekasi Barat",
     mapUrl: "https://maps.app.goo.gl/E96pKKsweWDi9xy59",
   },
