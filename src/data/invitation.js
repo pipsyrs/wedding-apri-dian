@@ -73,7 +73,7 @@ export const story = [
   {
     year: "1999",
     title: "First Meet",
-    body: "Tahun 1999 kami pertama kali kenal dan bertemu di gereja (sekolah minggu). Selama sekolah minggu kami tidak pernah bertemu kembali saat Malua / Katekisasi tahun 2008. Kami tetap tidak pernah berkomunikasi secara intens. Hingga selesainya katekisasi kami pun menjalani kehidupan masing-masing tanpa adanya komunikasi. Hingga pada tahun 2023 kami mulai berkomunikasi kembali di sosial media dan berlanjut dengan pertemuan.",
+    body: "Tahun 1999 kami pertama kali kenal dan bertemu di gereja (sekolah minggu). Selama sekolah minggu kami tidak pernah berkomunikasi secara intens. Kami bertemu kembali saat Malua / Katekisasi tahun 2008. Kami tetap tidak pernah berkomunikasi secara intens. Hingga selesainya katekisasi kami pun menjalani kehidupan masing-masing tanpa adanya komunikasi. Hingga pada tahun 2023 kami mulai berkomunikasi kembali di sosial media dan berlanjut dengan pertemuan.",
   },
   {
     year: "2023",
