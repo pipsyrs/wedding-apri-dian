@@ -9,7 +9,7 @@ export const meta = {
 
 export const couple = {
   groom: {
-    fullName: "Aprilanio Pardamean, S.E",
+    fullName: "Aprilanio Pardamean Siahaan, S.E",
     nickName: "Apri",
     marga: "Siahaan",
     order: "Putra dari",
