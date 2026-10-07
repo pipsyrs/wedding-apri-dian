@@ -16,6 +16,15 @@ export function WishForm({ onSent }) {
   const statusRef = useRef(null);
   const lastSent = useRef(null);
 
+  useEffect(() => {
+    const invitedName = new URLSearchParams(window.location.search).get("to")?.trim();
+    const nameInput = formRef.current?.elements.namedItem("name");
+
+    if (invitedName && nameInput instanceof HTMLInputElement) {
+      nameInput.value = invitedName.slice(0, 60);
+    }
+  }, []);
+
   // Kosongkan form dan teruskan ucapan baru ke daftar
   useEffect(() => {
     if (!state.ok || !state.wish) return;

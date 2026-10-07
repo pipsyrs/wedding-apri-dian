@@ -23,11 +23,15 @@ const dateLabel = new Intl.DateTimeFormat("id-ID", {
 export function CoverGate({ onOpen }) {
   const root = useRef(null);
   const [isClosing, setIsClosing] = useState(false);
+  const [recipientName, setRecipientName] = useState("");
   const { play } = useAudio();
 
   // Kunci scroll selama cover tampil
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    const invitedName = new URLSearchParams(window.location.search).get("to")?.trim();
+    if (invitedName) setRecipientName(invitedName.slice(0, 60));
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -142,6 +146,12 @@ export function CoverGate({ onOpen }) {
 
         <p data-cover-line className="mt-6 text-sm leading-relaxed text-ivory/80">
           Kepada Bapak/Ibu/Saudara/i,
+          {recipientName ? (
+            <>
+              <br />
+              <span className="font-medium text-gold">{recipientName}</span>
+            </>
+          ) : null}
           <br />
           tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir.
         </p>
