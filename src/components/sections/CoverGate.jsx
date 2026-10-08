@@ -149,7 +149,9 @@ export function CoverGate({ onOpen }) {
           {recipientName ? (
             <>
               <br />
-              <span className="font-medium text-gold">{recipientName}</span>
+              <span className="font-medium text-gold text-4xl whitespace-nowrap">
+                {recipientName}
+              </span>
             </>
           ) : null}
           <br />
